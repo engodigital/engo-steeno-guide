@@ -20,10 +20,6 @@
   .step-num { background: #3b82f6; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0; }
   .step-content h3 { font-size: 20px; font-weight: 600; color: #f1f5f9; margin-bottom: 6px; }
   .step-content p { color: #94a3b8; font-size: 18px; }
-  table { width: 100%; border-collapse: collapse; font-size: 17px; }
-  th { background: #0f172a; color: #64748b; text-align: left; padding: 12px 16px; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 0.05em; }
-  td { padding: 12px 16px; border-bottom: 1px solid #1e293b; color: #cbd5e1; vertical-align: top; font-size: 18px; }
-  tr:last-child td { border-bottom: none; }
   .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 17px; font-weight: 600; }
   .badge.u { background: #7f1d1d; color: #fca5a5; }
   .badge.a { background: #78350f; color: #fcd34d; }
@@ -48,6 +44,77 @@
   .link-box a:hover { text-decoration: underline; }
   .icon { font-size: 1.6rem; }
   footer { text-align: center; padding: 32px; color: #334155; font-size: 16px; border-top: 1px solid #1e293b; margin-top: 48px; }
+
+  /* ── MOCKUP GOOGLE SHEETS ── */
+  .mock-label { font-size: 13px; color: #475569; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; font-weight: 600; }
+  .gs-wrap { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #d1d5db; margin: 20px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.3); font-family: Arial, sans-serif; }
+  .gs-toolbar { background: #f8f9fa; border-bottom: 1px solid #e0e0e0; padding: 6px 12px; display: flex; align-items: center; gap: 8px; }
+  .gs-toolbar span { font-size: 13px; color: #5f6368; }
+  .gs-toolbar .formula-bar { flex: 1; background: #fff; border: 1px solid #dadce0; border-radius: 4px; padding: 3px 8px; font-size: 13px; color: #202124; font-family: monospace; }
+  .gs-header-row { background: #020617; color: #f1f5f9; font-weight: 700; font-size: 16px; padding: 14px 16px; letter-spacing: 0.02em; }
+  .gs-sub-row { background: #020617; color: #475569; font-size: 13px; padding: 6px 16px 10px; }
+  .gs-col-row { display: flex; background: #0f172a; border-top: 1px solid #1e293b; }
+  .gs-col-row .gc { color: #64748b; font-weight: 700; font-size: 12px; padding: 8px 10px; border-right: 1px solid #1e293b; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .gs-col-row .gc.green { color: #4ade80; }
+  .gs-data-row { display: flex; background: #1e3a5f; border-top: 1px solid #1e293b; }
+  .gs-data-row .gc { color: #e2e8f0; font-size: 13px; padding: 10px 10px; border-right: 1px solid #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 4px; }
+  .gs-data-row .gc.empty { background: #020617; }
+  .gs-data-row .gc.checkbox { background: #052e16; color: #4ade80; justify-content: center; font-size: 18px; }
+  .gc.w1 { width: 130px; min-width: 130px; }
+  .gc.w2 { width: 260px; min-width: 260px; flex: 1; }
+  .gc.w3 { width: 100px; min-width: 100px; }
+  .gc.w4 { width: 110px; min-width: 110px; }
+  .gc.w5 { width: 180px; min-width: 180px; }
+  .gc.w6 { width: 80px; min-width: 80px; }
+  .gc.w7 { width: 72px; min-width: 72px; }
+  .dropdown-arrow { color: #94a3b8; font-size: 11px; }
+  .calendar-icon { color: #60a5fa; font-size: 13px; }
+
+  /* Tab bar mockup */
+  .tab-bar { background: #f8f9fa; border-bottom: 2px solid #e0e0e0; display: flex; align-items: flex-end; gap: 0; padding: 0 8px; overflow-x: auto; font-family: Arial, sans-serif; }
+  .tab-item { padding: 8px 16px; font-size: 13px; color: #5f6368; border: 1px solid transparent; border-bottom: none; border-radius: 4px 4px 0 0; cursor: pointer; white-space: nowrap; margin-right: 2px; }
+  .tab-item.active { background: #fff; border-color: #e0e0e0; color: #1a73e8; font-weight: 600; }
+  .tab-item.highlight { background: #e8f0fe; color: #1a73e8; }
+
+  /* Menu mockup */
+  .menu-mock-wrap { background: #f8f9fa; border: 1px solid #dadce0; border-radius: 4px; display: inline-block; margin: 16px 0; font-family: Arial, sans-serif; box-shadow: 0 4px 12px rgba(0,0,0,0.2); overflow: hidden; min-width: 220px; }
+  .menu-bar-row { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 4px 0; display: flex; gap: 0; }
+  .menu-bar-item { padding: 6px 16px; font-size: 14px; color: #202124; cursor: pointer; }
+  .menu-bar-item.open { background: #e8f0fe; color: #1a73e8; font-weight: 600; }
+  .menu-dropdown { background: #fff; border: 1px solid #dadce0; border-radius: 0 0 4px 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .menu-item { padding: 10px 20px; font-size: 14px; color: #202124; cursor: pointer; }
+  .menu-item:hover, .menu-item.focus { background: #e8f0fe; }
+  .menu-sep { border-top: 1px solid #e0e0e0; margin: 4px 0; }
+
+  /* Tasks mockup */
+  .tasks-mock { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #d1d5db; margin: 20px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.3); font-family: Arial, sans-serif; }
+  .tasks-header { display: flex; background: #020617; }
+  .tasks-header .th { color: #94a3b8; font-size: 11px; font-weight: 700; padding: 10px 10px; border-right: 1px solid #1e293b; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .tasks-row { display: flex; border-top: 1px solid #1e293b; }
+  .tasks-row:nth-child(even) { background: #1e293b; }
+  .tasks-row:nth-child(odd) { background: #152032; }
+  .tasks-row .tc { color: #cbd5e1; font-size: 12px; padding: 10px 10px; border-right: 1px solid #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 4px; }
+  .stato-pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .stato-in { background: #1e3a5f; color: #7dd3fc; }
+  .stato-da { background: #334155; color: #94a3b8; }
+  .stato-comp { background: #052e16; color: #4ade80; }
+  .stato-bloc { background: #450a0a; color: #f87171; }
+  .prio-pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .prio-u { background: #450a0a; color: #fca5a5; }
+  .prio-a { background: #431407; color: #fb923c; }
+  .prio-m { background: #0c1a3a; color: #60a5fa; }
+  .prio-b { background: #0a1f0a; color: #4ade80; }
+  .tc-anno { color: #3b82f6; font-size: 12px; font-weight: 700; }
+  .arrow-down { font-size: 10px; color: #6b7280; }
+
+  /* Annotation callout */
+  .callout { position: relative; background: #fef3c7; border: 2px solid #f59e0b; border-radius: 8px; padding: 10px 14px; margin: 8px 0; font-size: 14px; color: #92400e; font-weight: 600; display: inline-block; }
+  .callout::before { content: '↑'; display: block; font-size: 20px; color: #f59e0b; text-align: center; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 17px; }
+  th { background: #0f172a; color: #64748b; text-align: left; padding: 12px 16px; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 0.05em; }
+  td { padding: 12px 16px; border-bottom: 1px solid #1e293b; color: #cbd5e1; vertical-align: top; font-size: 18px; }
+  tr:last-child td { border-bottom: none; }
 </style>
 </head>
 <body>
@@ -77,21 +144,43 @@
   <!-- STRUTTURA -->
   <div class="section">
     <h2>Come è organizzato il foglio</h2>
+
+    <p class="mock-label">I tab in fondo al foglio</p>
+    <div style="background:#fff;border-radius:10px;overflow:hidden;border:1px solid #d1d5db;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+      <div class="tab-bar">
+        <div class="tab-item active">🏠 Hub</div>
+        <div class="tab-item highlight">➕ Nuova Task</div>
+        <div class="tab-item">Tasks</div>
+        <div class="tab-item">📊 Dashboard</div>
+        <div class="tab-item">Granocielo</div>
+        <div class="tab-item">Masamia</div>
+        <div class="tab-item">Aquanama</div>
+        <div class="tab-item" style="color:#9ca3af;">...</div>
+      </div>
+      <div style="background:#fff;padding:12px 16px;font-size:13px;color:#5f6368;font-family:Arial,sans-serif;">
+        ← Scorri per vedere tutti i tab. Clicca sul nome del tab per aprirlo.
+      </div>
+    </div>
+
     <div class="card">
-      <h3>📋 Tasks — il foglio principale</h3>
-      <p>Qui inserisci e gestisci <strong>tutte le attività</strong> di tutti i clienti. È l'unico posto dove scrivi. Si ordina automaticamente per priorità e scadenza ogni volta che modifichi qualcosa.</p>
+      <h3>🏠 Hub — il tuo punto di partenza</h3>
+      <p>Apri sempre da qui. Trovi tutti i link: guida, foglio, ClickUp, Google Drive. Non devi ricordare niente a memoria.</p>
+    </div>
+    <div class="card">
+      <h3>➕ Nuova Task — dove inserisci le attività</h3>
+      <p>È l'unico posto dove scrivi le task. Compila i campi e spunta INVIA — la task finisce automaticamente nel foglio principale.</p>
+    </div>
+    <div class="card">
+      <h3>Tasks — il foglio principale</h3>
+      <p>Raccoglie tutte le attività di tutti i clienti. Si ordina automaticamente per priorità e scadenza. Qui puoi solo aggiornare lo Stato e il % — non aggiungere righe a mano.</p>
     </div>
     <div class="card">
       <h3>📊 Dashboard — il riepilogo</h3>
-      <p>Si aggiorna da sola ogni ora. Mostra lo stato di ogni cliente con semaforo (🟢 OK / 🟡 Attenzione / 🔴 A Rischio) e i KPI della settimana. Non toccare — è solo lettura.</p>
+      <p>Si aggiorna automaticamente. Mostra lo stato di ogni cliente con semaforo (🟢 OK / 🟡 Attenzione / 🔴 A Rischio). Solo lettura — non toccare.</p>
     </div>
     <div class="card">
       <h3>Granocielo / Masamia / Aquanama / ecc.</h3>
-      <p>Tab per ogni cliente. Si popolano automaticamente dal foglio Tasks — non devi inserire niente qui. Servono per vedere le attività di un singolo cliente in modo rapido.</p>
-    </div>
-    <div class="card">
-      <h3>📋 Report Settimanale</h3>
-      <p>Raccoglie automaticamente le tue risposte al form del venerdì. Non toccare.</p>
+      <p>Un tab per ogni cliente. Si popolano da soli dal foglio Tasks. Usali per vedere le attività di un singolo cliente in modo rapido.</p>
     </div>
   </div>
 
@@ -103,30 +192,74 @@
       <p>⚡ Usa sempre il tab <strong>➕ Nuova Task</strong> — non scrivere mai direttamente nel tab Tasks.</p>
     </div>
 
+    <!-- STEP 1 -->
     <div class="step">
       <div class="step-num">1</div>
       <div class="step-content">
-        <h3>Apri Nuova Task</h3>
-        <p>Clicca su <strong>+ Azioni Rapide → Nuova Task</strong> in cima al foglio, oppure clicca direttamente sul tab <strong>➕ Nuova Task</strong>.</p>
+        <h3>Apri il tab ➕ Nuova Task</h3>
+        <p>Clicca su <strong>+ Azioni Rapide → Nuova Task</strong> in cima al foglio, oppure clicca direttamente sul tab in fondo.</p>
       </div>
     </div>
 
-    <div class="step">
+    <p class="mock-label" style="margin-top:4px;">Dove trovare il menu in cima al foglio</p>
+    <div class="menu-mock-wrap">
+      <div class="menu-bar-row">
+        <div class="menu-bar-item">File</div>
+        <div class="menu-bar-item">Modifica</div>
+        <div class="menu-bar-item">Visualizza</div>
+        <div class="menu-bar-item">...</div>
+        <div class="menu-bar-item open">+ Azioni Rapide ▾</div>
+        <div class="menu-bar-item">Guida</div>
+      </div>
+      <div class="menu-dropdown">
+        <div class="menu-item">Ordina Task</div>
+        <div class="menu-item">Ordina Scadenza</div>
+        <div class="menu-sep"></div>
+        <div class="menu-item focus">&#x2192; Nuova Task</div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" style="margin-top:28px;">
       <div class="step-num">2</div>
       <div class="step-content">
         <h3>Compila i campi con i menu a tendina</h3>
-        <p>Clicca su ogni cella e scegli dall'elenco. Non scrivere a mano per Cliente e Priorità — usa il menu.</p>
+        <p>Clicca su ogni cella nella riga 5 e scegli dall'elenco. Non scrivere a mano per Cliente e Priorità — usa sempre il menu a tendina (▼).</p>
       </div>
     </div>
 
-    <div style="overflow-x:auto;margin-top:8px;margin-bottom:24px;">
+    <p class="mock-label">Il tab ➕ Nuova Task — riga 5 è dove compili</p>
+    <div class="gs-wrap" style="overflow-x:auto;">
+      <div class="gs-header-row">NUOVA TASK</div>
+      <div class="gs-sub-row">Compila la riga qui sotto; poi spunta la casella INVIA →</div>
+      <div class="gs-col-row">
+        <div class="gc w1">Cliente</div>
+        <div class="gc w2">Task</div>
+        <div class="gc w3">Priorità</div>
+        <div class="gc w4">Scadenza</div>
+        <div class="gc w5">Note</div>
+        <div class="gc w6">Link Drive</div>
+        <div class="gc w7 green">✅ INVIA</div>
+      </div>
+      <div class="gs-data-row">
+        <div class="gc w1">Granocielo <span class="dropdown-arrow">▼</span></div>
+        <div class="gc w2">Aggiornare campagna Meta...</div>
+        <div class="gc w3">2-Alta <span class="dropdown-arrow">▼</span></div>
+        <div class="gc w4">15/05/2026 <span class="calendar-icon">📅</span></div>
+        <div class="gc w5" style="color:#64748b;font-style:italic;">facoltativo</div>
+        <div class="gc w6 empty"></div>
+        <div class="gc w7 checkbox">☐</div>
+      </div>
+    </div>
+
+    <div style="overflow-x:auto;margin-top:16px;margin-bottom:24px;">
       <table>
         <tr>
           <th>Campo</th><th>Come compilarlo</th><th>Esempio</th>
         </tr>
         <tr>
           <td><strong>Cliente</strong></td>
-          <td>Menu a tendina — scegli dall'elenco</td>
+          <td>Menu a tendina ▼ — scegli dall'elenco</td>
           <td>Granocielo</td>
         </tr>
         <tr>
@@ -136,7 +269,7 @@
         </tr>
         <tr>
           <td><strong>Priorità</strong></td>
-          <td>Menu a tendina</td>
+          <td>Menu a tendina ▼</td>
           <td>
             <span class="badge u">1-Urgente</span>
             <span class="badge a">2-Alta</span>
@@ -146,40 +279,80 @@
         </tr>
         <tr>
           <td><strong>Scadenza</strong></td>
-          <td>Clicca → appare il calendario → scegli la data</td>
+          <td>Clicca → appare il calendario 📅 → scegli la data</td>
           <td>15/05/2026</td>
         </tr>
         <tr>
           <td><strong>Note</strong></td>
-          <td>Dettagli, contesto, blocchi (opzionale)</td>
+          <td>Dettagli, contesto, blocchi (facoltativo)</td>
           <td>Aspetto approvazione Marco</td>
         </tr>
         <tr>
           <td><strong>Link Drive</strong></td>
-          <td>Link alla cartella del cliente (opzionale)</td>
+          <td>Link alla cartella del cliente (facoltativo)</td>
           <td>https://drive.google.com/...</td>
         </tr>
       </table>
     </div>
 
+    <!-- STEP 3 -->
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-content">
-        <h3>Spunta ✅ INVIA</h3>
-        <p>Spunta la casella verde a destra. La task si aggiunge automaticamente al foglio principale, i campi si svuotano e sei pronto per la prossima.</p>
+        <h3>Spunta ✅ INVIA (ultima colonna a destra)</h3>
+        <p>Clicca sulla casella nella colonna INVIA. La task si aggiunge automaticamente al foglio Tasks, i campi si svuotano e sei pronto per la prossima.</p>
       </div>
     </div>
 
+    <p class="mock-label">La casella INVIA — è l'ultima colonna a destra</p>
+    <div class="gs-wrap" style="overflow-x:auto;">
+      <div class="gs-col-row">
+        <div class="gc w1">Cliente</div>
+        <div class="gc w2">Task</div>
+        <div class="gc w3">Priorità</div>
+        <div class="gc w4">Scadenza</div>
+        <div class="gc w5">Note</div>
+        <div class="gc w6">Link Drive</div>
+        <div class="gc w7 green">✅ INVIA</div>
+      </div>
+      <div class="gs-data-row">
+        <div class="gc w1">Masamia <span class="dropdown-arrow">▼</span></div>
+        <div class="gc w2">Pubblicare 3 post Instagram questa settimana</div>
+        <div class="gc w3">2-Alta <span class="dropdown-arrow">▼</span></div>
+        <div class="gc w4">13/05/2026 <span class="calendar-icon">📅</span></div>
+        <div class="gc w5" style="color:#64748b;font-style:italic;"></div>
+        <div class="gc w6 empty"></div>
+        <div class="gc w7 checkbox" style="background:#052e16;color:#4ade80;font-size:20px;justify-content:center;">☑</div>
+      </div>
+    </div>
+    <p style="color:#4ade80;font-size:14px;margin-top:8px;">← Spuntata = task inviata automaticamente a Tasks ✓</p>
+
     <div class="highlight" style="margin-top:20px;">
-      <p>⚡ Il foglio si riordina da solo non appena aggiungi una task: prima le urgenti, poi per scadenza. Non devi fare niente manualmente.</p>
+      <p>⚡ Il foglio si riordina da solo: prima le urgenti, poi per scadenza. Non devi fare niente manualmente.</p>
     </div>
   </div>
 
   <!-- MENU AZIONI RAPIDE -->
   <div class="section">
     <h2>Menu + Azioni Rapide</h2>
-    <p style="color:#94a3b8;margin-bottom:20px;font-size:18px;">In cima al foglio trovi il menu <strong style="color:#f1f5f9;">+ Azioni Rapide</strong>. Usalo ogni mattina per organizzare le tue task senza toccare niente a mano.</p>
-    <div class="card">
+    <p style="color:#94a3b8;margin-bottom:20px;font-size:18px;">In cima al foglio trovi il menu <strong style="color:#f1f5f9;">+ Azioni Rapide</strong>. Usalo ogni mattina per organizzare le task senza toccare niente a mano.</p>
+
+    <p class="mock-label">Il menu completo</p>
+    <div class="menu-mock-wrap">
+      <div class="menu-bar-row">
+        <div class="menu-bar-item open">+ Azioni Rapide ▾</div>
+      </div>
+      <div class="menu-dropdown">
+        <div class="menu-item" style="font-weight:600;">Ordina Task</div>
+        <div class="menu-item" style="color:#5f6368;font-size:13px;padding-top:2px;padding-bottom:8px;padding-left:20px;">Riordina per priorità poi scadenza</div>
+        <div class="menu-item" style="font-weight:600;">Ordina Scadenza</div>
+        <div class="menu-item" style="color:#5f6368;font-size:13px;padding-top:2px;padding-bottom:8px;padding-left:20px;">Riordina per data più vicina</div>
+        <div class="menu-sep"></div>
+        <div class="menu-item" style="font-weight:600;color:#1a73e8;">➕ Nuova Task</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
       <h3>Ordina Task</h3>
       <p>Riordina tutte le task per priorità (urgente prima), poi per scadenza. Usalo all'inizio di ogni giornata.</p>
     </div>
@@ -189,7 +362,7 @@
     </div>
     <div class="card">
       <h3>Nuova Task</h3>
-      <p>Apre direttamente il modulo di inserimento. Più veloce che cliccare sul tab.</p>
+      <p>Apre direttamente il tab ➕ Nuova Task. Più veloce che cliccare il tab in fondo.</p>
     </div>
   </div>
 
@@ -198,34 +371,78 @@
     <h2>Quando cambiare lo stato</h2>
 
     <div class="highlight" style="margin-bottom:24px;">
-      <p>📌 Per aggiornare lo stato: vai nel tab <strong>Tasks</strong> → clicca sulla cella nella colonna <strong>Stato</strong> → scegli dal <strong>menu a tendina</strong>. Non scrivere a mano.</p>
+      <p>📌 Per aggiornare lo stato: vai nel tab <strong>Tasks</strong> → trova la task → clicca sulla cella nella colonna <strong>Stato</strong> → scegli dal <strong>menu a tendina ▼</strong>. Non scrivere a mano.</p>
     </div>
-    <div class="card">
-      <h3><span class="status da">Da Iniziare</span></h3>
-      <p style="margin-top:8px;">Task appena creata, non hai ancora lavorato.</p>
+
+    <p class="mock-label">Come appare il tab Tasks — colonna Stato in evidenza</p>
+    <div class="tasks-mock" style="overflow-x:auto;">
+      <div class="tasks-header">
+        <div class="th" style="width:120px;min-width:120px;">Cliente</div>
+        <div class="th" style="width:220px;min-width:220px;flex:1;">Task</div>
+        <div class="th" style="width:95px;min-width:95px;">Priorità</div>
+        <div class="th" style="width:105px;min-width:105px;">Data Cre.</div>
+        <div class="th" style="width:105px;min-width:105px;">Scadenza</div>
+        <div class="th" style="width:105px;min-width:105px;background:#1e3a5f;color:#7dd3fc;">Stato ▼</div>
+        <div class="th" style="width:60px;min-width:60px;">%</div>
+      </div>
+      <div class="tasks-row">
+        <div class="tc" style="width:120px;min-width:120px;">Lengosteeno</div>
+        <div class="tc" style="width:220px;min-width:220px;flex:1;">Acquisto domini .com e .es</div>
+        <div class="tc" style="width:95px;min-width:95px;"><span class="prio-pill prio-a">2-Alta</span></div>
+        <div class="tc" style="width:105px;min-width:105px;">11/05/2026</div>
+        <div class="tc" style="width:105px;min-width:105px;">11/05/2026</div>
+        <div class="tc" style="width:105px;min-width:105px;"><span class="stato-pill stato-in">In Corso</span> <span class="arrow-down">▼</span></div>
+        <div class="tc" style="width:60px;min-width:60px;">0%</div>
+      </div>
+      <div class="tasks-row">
+        <div class="tc" style="width:120px;min-width:120px;">Masamia</div>
+        <div class="tc" style="width:220px;min-width:220px;flex:1;">Fix H1 homepage — testo non visibile</div>
+        <div class="tc" style="width:95px;min-width:95px;"><span class="prio-pill prio-a">2-Alta</span></div>
+        <div class="tc" style="width:105px;min-width:105px;">11/05/2026</div>
+        <div class="tc" style="width:105px;min-width:105px;">12/05/2026</div>
+        <div class="tc" style="width:105px;min-width:105px;"><span class="stato-pill stato-in">In Corso</span> <span class="arrow-down">▼</span></div>
+        <div class="tc" style="width:60px;min-width:60px;">0%</div>
+      </div>
+      <div class="tasks-row">
+        <div class="tc" style="width:120px;min-width:120px;">Masamia</div>
+        <div class="tc" style="width:220px;min-width:220px;flex:1;">Creazione canale YouTube</div>
+        <div class="tc" style="width:95px;min-width:95px;"><span class="prio-pill prio-m">3-Media</span></div>
+        <div class="tc" style="width:105px;min-width:105px;">11/05/2026</div>
+        <div class="tc" style="width:105px;min-width:105px;">12/05/2026</div>
+        <div class="tc" style="width:105px;min-width:105px;"><span class="stato-pill stato-da">Da Iniziare</span> <span class="arrow-down">▼</span></div>
+        <div class="tc" style="width:60px;min-width:60px;">0%</div>
+      </div>
     </div>
-    <div class="card">
-      <h3><span class="status in">In Corso</span></h3>
-      <p style="margin-top:8px;">Stai lavorando attivamente su questa task.</p>
-    </div>
-    <div class="card">
-      <h3><span class="status comp">Completata</span></h3>
-      <p style="margin-top:8px;">Fatto. Metti anche 100% nella colonna % Completamento.</p>
-    </div>
-    <div class="card">
-      <h3><span class="status bloc">Bloccata</span></h3>
-      <p style="margin-top:8px;">Non puoi andare avanti per un motivo specifico (aspetti qualcosa da Marco, da un cliente, problema tecnico). <strong>Segnalala sempre nel report del venerdì.</strong></p>
-    </div>
-    <div class="card">
-      <h3><span class="status ferm">Ferma</span></h3>
-      <p style="margin-top:8px;">Messa in pausa per decisione — non urgente, si riprende in futuro.</p>
+    <p style="color:#60a5fa;font-size:14px;margin-top:6px;">← Clicca su qualsiasi cella nella colonna Stato → appare il menu a tendina ▼</p>
+
+    <div style="margin-top:24px;">
+      <div class="card">
+        <h3><span class="status da">Da Iniziare</span></h3>
+        <p style="margin-top:8px;">Task appena creata, non hai ancora lavorato.</p>
+      </div>
+      <div class="card">
+        <h3><span class="status in">In Corso</span></h3>
+        <p style="margin-top:8px;">Stai lavorando attivamente su questa task.</p>
+      </div>
+      <div class="card">
+        <h3><span class="status comp">Completata</span></h3>
+        <p style="margin-top:8px;">Fatto. Metti anche 100% nella colonna % Completamento.</p>
+      </div>
+      <div class="card">
+        <h3><span class="status bloc">Bloccata</span></h3>
+        <p style="margin-top:8px;">Non puoi andare avanti per un motivo specifico (aspetti qualcosa da Marco, da un cliente, problema tecnico). <strong>Segnalala sempre nel report del venerdì.</strong></p>
+      </div>
+      <div class="card">
+        <h3><span class="status ferm">Ferma</span></h3>
+        <p style="margin-top:8px;">Messa in pausa per decisione — non urgente, si riprende in futuro.</p>
+      </div>
     </div>
   </div>
 
   <!-- REPORT VENERDÌ -->
   <div class="section">
     <h2>Report settimanale — ogni venerdì</h2>
-    <p style="color:#94a3b8;margin-bottom:20px;font-size:18px;">Ogni venerdì alle 17:00 ricevi un'email con il link. Compila entro le 18:00. Ci vogliono 3 minuti.</p>
+    <p style="color:#94a3b8;margin-bottom:20px;font-size:18px;">Ogni venerdì alle 17:00 ricevi un'email con il link al form. Compila entro le 18:00. Ci vogliono 3 minuti.</p>
 
     <div class="friday-box">
       <h3>📝 Esempio di compilazione corretta</h3>
@@ -235,7 +452,7 @@
         <div class="example">• Granocielo: pubblicati 4 post IG, risposto a tutti i messaggi entro 2h, report mensile inviato
 • Masamia: ottimizzate 2 campagne Meta, CPL sceso da €3,2 a €2,7
 • Aquanama: completato setup GHL, workflow attivo da lunedì
-• Marco ES: aggiornata landing con nuove foto ricevute da Marco</div>
+• Lengosteeno: acquistati domini .com e .es, landing page IT al 60%</div>
       </div>
 
       <div class="q">
@@ -292,7 +509,7 @@
 </div>
 
 <footer>
-  🦞 ENGO STEENO v1.2 — Engo Agency · 2026
+  🦞 ENGO STEENO v1.3 — Engo Agency · 2026
 </footer>
 
 </body>
