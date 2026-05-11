@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENGO STEENO — Guida Operativa</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 18px; background: #0f1117; color: #e2e8f0; line-height: 1.75; }
+  .header { background: linear-gradient(135deg, #1e293b, #0f172a); padding: 48px 32px 32px; border-bottom: 1px solid #1e293b; }
+  .header h1 { font-size: 2.2rem; font-weight: 700; color: #f1f5f9; }
+  .header .sub { color: #64748b; margin-top: 8px; font-size: 18px; }
+  .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+  .section { margin-bottom: 52px; }
+  .section h2 { font-size: 20px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #1e293b; }
+  .card { background: #1e293b; border-radius: 12px; padding: 24px; margin-bottom: 16px; border: 1px solid #334155; }
+  .card h3 { font-size: 20px; font-weight: 600; color: #f1f5f9; margin-bottom: 10px; }
+  .card p { color: #94a3b8; font-size: 18px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
+  .step-num { background: #3b82f6; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0; }
+  .step-content h3 { font-size: 20px; font-weight: 600; color: #f1f5f9; margin-bottom: 6px; }
+  .step-content p { color: #94a3b8; font-size: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 17px; }
+  th { background: #0f172a; color: #64748b; text-align: left; padding: 12px 16px; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 0.05em; }
+  td { padding: 12px 16px; border-bottom: 1px solid #1e293b; color: #cbd5e1; vertical-align: top; font-size: 18px; }
+  tr:last-child td { border-bottom: none; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 17px; font-weight: 600; }
+  .badge.u { background: #7f1d1d; color: #fca5a5; }
+  .badge.a { background: #78350f; color: #fcd34d; }
+  .badge.m { background: #1e3a5f; color: #93c5fd; }
+  .badge.b { background: #1e2d1e; color: #86efac; }
+  .status { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 6px; font-size: 18px; }
+  .status.da { background: #1e293b; color: #94a3b8; border: 1px solid #334155; }
+  .status.in { background: #1e3a5f; color: #93c5fd; border: 1px solid #1d4ed8; }
+  .status.comp { background: #1e2d1e; color: #86efac; border: 1px solid #16a34a; }
+  .status.bloc { background: #3b1f1f; color: #f87171; border: 1px solid #dc2626; }
+  .status.ferm { background: #2a2a2a; color: #6b7280; border: 1px solid #374151; }
+  .highlight { background: #172032; border-left: 3px solid #3b82f6; padding: 18px 22px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  .highlight p { color: #93c5fd; font-size: 18px; }
+  .example { background: #0f1117; border: 1px solid #334155; border-radius: 8px; padding: 16px; margin-top: 12px; font-family: monospace; font-size: 17px; color: #86efac; white-space: pre-wrap; }
+  .friday-box { background: linear-gradient(135deg, #1a1f2e, #0f1117); border: 1px solid #334155; border-radius: 12px; padding: 24px; }
+  .friday-box h3 { color: #f59e0b; margin-bottom: 12px; font-size: 20px; }
+  .q { margin-bottom: 18px; }
+  .q .label { color: #64748b; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .q .answer { color: #e2e8f0; font-size: 18px; }
+  .link-box { background: #1e293b; border: 1px solid #3b82f6; border-radius: 8px; padding: 18px 22px; display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .link-box a { color: #60a5fa; text-decoration: none; font-size: 18px; word-break: break-all; }
+  .link-box a:hover { text-decoration: underline; }
+  .icon { font-size: 1.6rem; }
+  footer { text-align: center; padding: 32px; color: #334155; font-size: 16px; border-top: 1px solid #1e293b; margin-top: 48px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div style="max-width:860px;margin:0 auto;">
+    <div style="font-size:2.5rem;margin-bottom:12px;">🦞</div>
+    <h1>ENGO STEENO — Guida Operativa</h1>
+    <p class="sub">Come usare il foglio, aggiungere task e compilare il report settimanale</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- LINK -->
+  <div class="section">
+    <h2>I tuoi strumenti</h2>
+    <div class="link-box">
+      <span class="icon">📊</span>
+      <div>
+        <div style="color:#94a3b8;font-size:0.8rem;margin-bottom:2px;">Foglio operativo</div>
+        <a href="https://docs.google.com/spreadsheets/d/11qCmbkIssPSLBujOdu-zhHgtu5b_slN35TPH_ZvPk80/edit" target="_blank">ENGO STEENO — apri su Google Sheets</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRUTTURA -->
+  <div class="section">
+    <h2>Come è organizzato il foglio</h2>
+    <div class="card">
+      <h3>📋 Tasks — il foglio principale</h3>
+      <p>Qui inserisci e gestisci <strong>tutte le attività</strong> di tutti i clienti. È l'unico posto dove scrivi. Si ordina automaticamente per priorità e scadenza ogni volta che modifichi qualcosa.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Dashboard — il riepilogo</h3>
+      <p>Si aggiorna da sola ogni ora. Mostra lo stato di ogni cliente con semaforo (🟢 OK / 🟡 Attenzione / 🔴 A Rischio) e i KPI della settimana. Non toccare — è solo lettura.</p>
+    </div>
+    <div class="card">
+      <h3>Granocielo / Masamia / Aquanama / ecc.</h3>
+      <p>Tab per ogni cliente. Si popolano automaticamente dal foglio Tasks — non devi inserire niente qui. Servono per vedere le attività di un singolo cliente in modo rapido.</p>
+    </div>
+    <div class="card">
+      <h3>📋 Report Settimanale</h3>
+      <p>Raccoglie automaticamente le tue risposte al form del venerdì. Non toccare.</p>
+    </div>
+  </div>
+
+  <!-- AGGIUNGERE TASK -->
+  <div class="section">
+    <h2>Come aggiungere una task</h2>
+
+    <div class="highlight" style="margin-bottom:24px;">
+      <p>⚡ Usa sempre il tab <strong>➕ Nuova Task</strong> — non scrivere mai direttamente nel tab Tasks.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Apri Nuova Task</h3>
+        <p>Clicca su <strong>+ Azioni Rapide → Nuova Task</strong> in cima al foglio, oppure clicca direttamente sul tab <strong>➕ Nuova Task</strong>.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Compila i campi con i menu a tendina</h3>
+        <p>Clicca su ogni cella e scegli dall'elenco. Non scrivere a mano per Cliente e Priorità — usa il menu.</p>
+      </div>
+    </div>
+
+    <div style="overflow-x:auto;margin-top:8px;margin-bottom:24px;">
+      <table>
+        <tr>
+          <th>Campo</th><th>Come compilarlo</th><th>Esempio</th>
+        </tr>
+        <tr>
+          <td><strong>Cliente</strong></td>
+          <td>Menu a tendina — scegli dall'elenco</td>
+          <td>Granocielo</td>
+        </tr>
+        <tr>
+          <td><strong>Task</strong></td>
+          <td>Scrivi la descrizione — chiara e specifica</td>
+          <td>Aggiornare campagna Meta — aumentare budget 20%</td>
+        </tr>
+        <tr>
+          <td><strong>Priorità</strong></td>
+          <td>Menu a tendina</td>
+          <td>
+            <span class="badge u">1-Urgente</span>
+            <span class="badge a">2-Alta</span>
+            <span class="badge m">3-Media</span>
+            <span class="badge b">4-Bassa</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Scadenza</strong></td>
+          <td>Clicca → appare il calendario → scegli la data</td>
+          <td>15/05/2026</td>
+        </tr>
+        <tr>
+          <td><strong>Note</strong></td>
+          <td>Dettagli, contesto, blocchi (opzionale)</td>
+          <td>Aspetto approvazione Marco</td>
+        </tr>
+        <tr>
+          <td><strong>Link Drive</strong></td>
+          <td>Link alla cartella del cliente (opzionale)</td>
+          <td>https://drive.google.com/...</td>
+        </tr>
+        <tr>
+          <td><strong>Link ClickUp</strong></td>
+          <td>Link alla task su ClickUp — cliccabile direttamente (opzionale)</td>
+          <td>https://app.clickup.com/t/...</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Spunta ✅ INVIA</h3>
+        <p>Spunta la casella verde a destra. La task si aggiunge automaticamente al foglio principale, i campi si svuotano e sei pronto per la prossima.</p>
+      </div>
+    </div>
+
+    <div class="highlight" style="margin-top:20px;">
+      <p>⚡ Il foglio si riordina da solo non appena aggiungi una task: prima le urgenti, poi per scadenza. Non devi fare niente manualmente.</p>
+    </div>
+  </div>
+
+  <!-- MENU AZIONI RAPIDE -->
+  <div class="section">
+    <h2>Menu + Azioni Rapide</h2>
+    <p style="color:#94a3b8;margin-bottom:20px;font-size:18px;">In cima al foglio trovi il menu <strong style="color:#f1f5f9;">+ Azioni Rapide</strong>. Usalo ogni mattina per organizzare le tue task senza toccare niente a mano.</p>
+    <div class="card">
+      <h3>Ordina Task</h3>
+      <p>Riordina tutte le task per priorità (urgente prima), poi per scadenza. Usalo all'inizio di ogni giornata.</p>
+    </div>
+    <div class="card">
+      <h3>Ordina Scadenza</h3>
+      <p>Riordina per data di scadenza — quelle che scadono prima compaiono in cima. Utile per vedere cosa sta per arrivare.</p>
+    </div>
+    <div class="card">
+      <h3>Nuova Task</h3>
+      <p>Apre direttamente il modulo di inserimento. Più veloce che cliccare sul tab.</p>
+    </div>
+  </div>
+
+  <!-- STATI -->
+  <div class="section">
+    <h2>Quando cambiare lo stato</h2>
+
+    <div class="highlight" style="margin-bottom:24px;">
+      <p>📌 Per aggiornare lo stato: vai nel tab <strong>Tasks</strong> → clicca sulla cella nella colonna <strong>Stato</strong> → scegli dal <strong>menu a tendina</strong>. Non scrivere a mano.</p>
+    </div>
+    <div class="card">
+      <h3><span class="status da">Da Iniziare</span></h3>
+      <p style="margin-top:8px;">Task appena creata, non hai ancora lavorato.</p>
+    </div>
+    <div class="card">
+      <h3><span class="status in">In Corso</span></h3>
+      <p style="margin-top:8px;">Stai lavorando attivamente su questa task.</p>
+    </div>
+    <div class="card">
+      <h3><span class="status comp">Completata</span></h3>
+      <p style="margin-top:8px;">Fatto. Metti anche 100% nella colonna % Completamento.</p>
+    </div>
+    <div class="card">
+      <h3><span class="status bloc">Bloccata</span></h3>
+      <p style="margin-top:8px;">Non puoi andare avanti per un motivo specifico (aspetti qualcosa da Marco, da un cliente, problema tecnico). <strong>Segnalala sempre nel report del venerdì.</strong></p>
+    </div>
+    <div class="card">
+      <h3><span class="status ferm">Ferma</span></h3>
+      <p style="margin-top:8px;">Messa in pausa per decisione — non urgente, si riprende in futuro.</p>
+    </div>
+  </div>
+
+  <!-- REPORT VENERDÌ -->
+  <div class="section">
+    <h2>Report settimanale — ogni venerdì</h2>
+    <p style="color:#94a3b8;margin-bottom:20px;font-size:18px;">Ogni venerdì alle 17:00 ricevi un'email con il link. Compila entro le 18:00. Ci vogliono 3 minuti.</p>
+
+    <div class="friday-box">
+      <h3>📝 Esempio di compilazione corretta</h3>
+
+      <div class="q">
+        <div class="label">Riassunto settimana (bullet point per cliente)</div>
+        <div class="example">• Granocielo: pubblicati 4 post IG, risposto a tutti i messaggi entro 2h, report mensile inviato
+• Masamia: ottimizzate 2 campagne Meta, CPL sceso da €3,2 a €2,7
+• Aquanama: completato setup GHL, workflow attivo da lunedì
+• Marco ES: aggiornata landing con nuove foto ricevute da Marco</div>
+      </div>
+
+      <div class="q">
+        <div class="label">Blocchi o problemi aperti</div>
+        <div class="example">• Granocielo: mancano le foto per la campagna di giugno — aspetto da Flordenny
+• Aquanama: il dominio non punta ancora al sito, devo aspettare il cliente</div>
+      </div>
+
+      <div class="q">
+        <div class="label">Le 3 cose principali della prossima settimana</div>
+        <div class="example">1. Lanciare campagna estiva Masamia (scadenza mercoledì)
+2. Inviare report mensile Aquanama
+3. Creare 5 post programmati Granocielo per giugno</div>
+      </div>
+
+      <div class="q">
+        <div class="label">Cosa ti serve da Marco?</div>
+        <div class="example">• Approvazione copy campagna Masamia (ti mando in ClickUp)
+• Accesso alla pagina Facebook di Granocielo — non riesco ad entrare</div>
+      </div>
+    </div>
+
+    <div class="highlight" style="margin-top:20px;">
+      <p>💡 Scrivi come parleresti a Marco di persona. Breve, diretto, con i numeri quando ci sono. Non serve essere formale.</p>
+    </div>
+  </div>
+
+  <!-- REGOLE -->
+  <div class="section">
+    <h2>3 regole da seguire sempre</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Aggiorna lo stato ogni giorno</h3>
+        <p>Se una task passa da "Da Iniziare" a "In Corso", cambiala subito. Marco vede la dashboard in tempo reale — se lo stato è vecchio, il dato non serve.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Segna "Bloccata" appena sei bloccato</h3>
+        <p>Non aspettare il venerdì. Se sei bloccato oggi, cambia lo stato a Bloccata e scrivi il motivo nelle Note. Marco riceve notifica automatica.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Compila il report il venerdì</h3>
+        <p>Arriva via email alle 17:00 del venerdì. Compilalo entro le 18:00. È il modo in cui Marco sa cosa sta succedendo senza chiederti niente.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  🦞 ENGO STEENO v1.2 — Engo Agency · 2026
+</footer>
+
+</body>
+</html>
